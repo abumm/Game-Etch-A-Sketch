@@ -6,12 +6,35 @@
     display: inline-block;
 }
 
+._title{
+    font-size: 45px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    width: 100vw;
+}
+
+.gridButton{
+    height: 90px;
+    width: 180px;
+    color: blue;
+    font-size: 30px;
+}
+
+.row{
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    width: auto;
+    height: 30px;
+}
+
 .box{
     display: inline-block;
     background-color: blue;
     height: 30px;
     width: 30px;
-    margin: 3px;
-    border: 3px;
+    margin: 0px;
+    border: 0px;
 }
 
