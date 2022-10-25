@@ -1,0 +1,17 @@
+._body {
+    display: inline-block;
+}
+
+.grid{
+    display: inline-block;
+}
+
+.box{
+    display: inline-block;
+    background-color: blue;
+    height: 30px;
+    width: 30px;
+    margin: 3px;
+    border: 3px;
+}
+
