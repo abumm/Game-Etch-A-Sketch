@@ -9,6 +9,16 @@ main.appendChild(grid);
 //call grid function 
 gridCreate();
 
+//hover listner
+addEventListener('mouseover', (event) =>{
+    if(event.target.className == 'box'){
+        event.target.style.backgroundColor = 'red';
+    }
+    else {
+
+    }
+})
+
 //creating grid function 
 function gridCreate(){
     /* let rows = document.createElement('div');
