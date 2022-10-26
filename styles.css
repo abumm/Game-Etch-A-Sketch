@@ -1,9 +1,15 @@
 ._body {
     display: inline-block;
+    padding-bottom: 50%;
 }
 
 .grid{
     display: inline-block;
+    position: absolute;
+    margin: 15px;
+    height: 900px;
+    width: 900px;
+    
 }
 
 ._title{
@@ -15,6 +21,9 @@
 }
 
 .gridButton{
+    display: inline-block;
+    margin: 15px;
+    padding: 5px;
     height: 90px;
     width: 180px;
     color: blue;

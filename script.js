@@ -11,11 +11,12 @@ grid.className = 'grid';
 let main = document.querySelector('._container ');
 main.appendChild(grid);
 
+
 //create button to edit size of grid
-let gridSize = document.createElement('button');
-gridSize.innerText = 'Change Grid Size';
-gridSize.className = 'gridButton';
-main.appendChild(gridSize);
+let gridSizeBtn = document.createElement('button');
+gridSizeBtn.innerText = 'Change Grid Size';
+gridSizeBtn.className = 'gridButton';
+main.prepend(gridSizeBtn);
 
 
 //call grid function 
@@ -31,7 +32,7 @@ addEventListener('mouseover', (event) =>{
     }
 })
 //button listner    
-gridSize.addEventListener('click', function()
+gridSizeBtn.addEventListener('click', function()
  { sizeFunction();
 });
 
@@ -43,12 +44,13 @@ function gridCreate(x){
     let columns = document.createElement('div');
     columns.className = 'column'; */
 
-    for (let r = 0; r < x; r++){
+    for (let r = 1; r <= x; r++){
         let rows = document.createElement('div');
         rows.className = 'row';
-        for (let c = 0; c < x; c++){
+        for (let c = 1; c <= x; c++){
             let gridBox = document.createElement('div');
             gridBox.className = 'box';
+            //console.log(x,r,c)
             rows.appendChild(gridBox);
         }
         grid.appendChild(rows);
@@ -58,18 +60,20 @@ function gridCreate(x){
 function sizeFunction(){
     newXY = prompt("Enter a number to resize your drawing board.");
 
-    if(isNaN(newXY)){
+    if(isNaN(newXY) || newXY <= 0){
         alert("That's not a number, try again.");
         sizeFunction();
     }
-    else{
+    else if(newXY > 100){
+        newXY = 100;
         grid.replaceChildren();
         gridCreate(newXY);
+        //console.log(newXY);
     }
+    else {
+        grid.replaceChildren();
+        gridCreate(newXY);
+        //console.log(newXY);
+
+    } 
     }
-    console.log(newXY);
-
-    console.log(typeof(newXY));
-
-
-console.log(newXY);
